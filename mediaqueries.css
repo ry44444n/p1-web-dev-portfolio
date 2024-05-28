@@ -1,47 +1,43 @@
-@media screen and (max-width: 1400px) {
-    #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
-    }
-    .about-containers {
-        flex-wrap: wrap;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
-    #hamburger-nav {
-        display: flex;
-    }
-    #experience, .experience-details-container{
-        margin-top: 2rem;
-    }
-    #profile, .section-container{
-        display:block;
-    }
-    .arrow{
-        display: none;
-    }
-    section, .section-container{
-        height: fit-content;
-    }
-    section {
-        margin: 0 5%;
-    }
-    .section__pic-container{
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
+@media screen and (min-width: 320px) and (max-width: 430px) {
     .about-containers{
-        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+    .details-container {
+        padding: 0.9rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .contact-image {
+        display: flex;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .contact-title {
+        font-size: xx-large;
+    }
+    
+    .contact-message {
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        bottom: -100px;
     }
 }
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (max-width: 768px) {
     #contact, footer {
         height: 40vh;
     }
@@ -59,7 +55,7 @@
     .about-containers, .contact-info-upper-container, .btn-container {
         flex-wrap: wrap;
     }
-    .contact-info-container{
+    .contact-info-container {
         margin: 0;
     }
     .contact-info-container p, .nav-links li a {
@@ -72,16 +68,23 @@
         font-size: 1.5rem;
     }
     .nav-links {
+        display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+        gap: 10px;
+        font-size: .5rem ;    
     }
-    .section__pic-container {
+
+    .nav-links-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-pic-container {
         width: auto;
         height: 46vw;
         justify-content: center;
     }
-    .section__text__p2{
+    .section-text-p2 {
         font-size: 1.25rem;
     }
     .title {
@@ -90,4 +93,104 @@
     .text-container {
         text-align: justify;
     }
+
+    footer {
+        display: flex;
+        position: relative;
+        bottom: -100px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .hidden {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-position {
+        display: block;
+    }
+
+    .nav-links-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links {
+        font-size: medium;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        bottom: -100px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+    #experience, .experience-details-container {
+        margin-top: 2rem;
+    }
+    #profile, .section-container {
+        display:block;
+    }
+    .arrow{
+        display: none;
+    }
+    section, .section-container {
+        height: fit-content;
+    }
+    section {
+        margin: 0 5%;
+    }
+    .section-pic-container{
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+    .about-containers{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-containers {
+        flex-wrap: wrap;
+    }
+}
+
+
+.scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: seagreen;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to { scale: 1 1;}
 }
