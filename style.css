@@ -176,7 +176,6 @@ section {
 /* PROFILE SECTION */
 
 #profile {
-  background-color: aqua;
   display: flex;
   justify-content: center;
   gap: 5rem;
